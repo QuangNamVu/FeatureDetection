@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 threshold = 0.01
-filename = "/home/nam/Dropbox/hk181/image_processing/asm/image/geo_shapes.png"
-output_img = "/home/nam/Dropbox/hk181/image_processing/asm/output/Harris_geo_shapes.png"
+filename = "/home/nam/Dropbox/hk181/image_processing/asm/image/square_rotate.png"
+output_img = "/home/nam/Dropbox/hk181/image_processing/asm/output/Harris_square_rotate.png"
 
 img = cv2.imread(filename)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

@@ -5,7 +5,7 @@ import sys
 
 def draw_corners(image, corners_map):
     for corner in corners_map:
-        cv2.circle(image, (corner[1], corner[0]), 1, (0, 255, 0), -1)
+        cv2.circle(image, (corner[1], corner[0]), 2, (0, 255, 0), -1)
 
 
 def moravec(image, threshold=50):
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     """
 
 
-    image_path = "/home/nam/Dropbox/hk181/image_processing/asm/image/corner.jpg"
+    image_path = "/home/nam/Dropbox/hk181/image_processing/asm/image/square_rotate.png"
 
     threshold = 100
 
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     if "-t" in sys.argv:
         threshold = int(sys.argv[sys.argv.index("-t") + 1])
 
-    output_img = "/home/nam/Dropbox/hk181/image_processing/asm/output/moravec_corner.jpg"
+    output_img = "/home/nam/Dropbox/hk181/image_processing/asm/output/moravec_square_rotate.png"
 
     if "-o" in sys.argv:
         output_img = str(sys.argv[sys.argv.index("-o") + 1])

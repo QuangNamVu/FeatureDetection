@@ -1,8 +1,8 @@
 clc
 clear all
-
-Image2=imread('/home/nam/Dropbox/hk181/image_processing/asm/image/square_rotate.png');
-Image1 = rgb2gray(Image2);
+close all
+Image1 = imread('/home/nam/Dropbox/hk181/image_processing/asm/image/square_rotate.png');
+#Image1 = rgb2gray(Image2);
 Image1  = im2double(Image1);
 kl=size(Image1);
 xmax=kl(1);
@@ -19,7 +19,7 @@ ymax=ymax-8;
 hsize=[7 7];
 sigma=0.5;
 K=0.1;
-Threshold=0.005;
+Threshold=0.00005;
 
 dx = [-1 0 1; -1 0 1; -1 0 1];
 dy = dx';
@@ -78,10 +78,6 @@ hold on
 for i=1:size(c)
     for j=1:size(r)
         
- 
-% 
-%  i=94;
-% j=417;
 
 xloc=c(i);
 yloc=r(i);
